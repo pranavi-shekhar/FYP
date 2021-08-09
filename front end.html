@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display:table-cell;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 0.6;
+}
+
+input[type=button] {
+  width: 120%;
+  background-color:orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12pt;
+  font-weight: bold;
+  display: inline;
+}
+
+input[type=button]:hover {
+  opacity: 0.5;
+}
+
+label { display:table-cell;color:oldlace; font-weight: bold;  font-size: 15pt;
+   }
+   p{display: table-row;}
+   html, body {
+    height: 100%;
+}
+ 
+ 
+body{background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+  }
+
+  div{ width: 50%;height:auto;
+            margin-left: auto;
+            margin-right: auto; margin-top: 0px;}
+            span{
+              color:orange;
+              
+              font-size: 33.7pt;
+              display: inline-block;
+              vertical-align: middle;
+              width: 100%;
+               
+            }
+            #score,#class{
+  width: 100px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display:table-cell;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  background: transparent;
+  color: beige;
+  font-size: 12pt;
+  opacity: 1;
+}
+</style>
+<body>
+
+
+
+  <div><span>PREDICTING FDA APPROVAL</span></div><br><br>
+<div>
+ 
+<p><label for="1">Tumor_type_enrichement_or_selection</label><input type="text" id="1"></p>
+<p><label for="2">Dose_expansion_cohort</label><input type="text" id="2"></p>
+<p><label for="3">Biomarker_molecular_considered</label><input type="text" id="3"></p>
+<p><label for="4">Complete_response_reported</label><input type="text" id="4"></p>
+<p><label for="5">category.Antibodies</label><input type="text" id="5"></p>
+<p><label for="6">category.BCRP.ABCG2.Inhibitors</label><input type="text" id="6"></p>
+<p><label for="7">category.Cytochrome.P.450.CYP2C8.Substrates</label><input type="text" id="7"></p>
+<p><label for="8">category.Cytochrome.P.450.CYP2C9.Substrates</label><input type="text" id="8"></p>
+<p><label for="9">category.Cytochrome.P.450.CYP2D6.Inhibitors..weak.</label><input type="text" id="9"></p>
+<p><label for="10">category.Cytochrome.P.450.CYP3A.Inducers</label><input type="text" id="10"></p>
+<p><label for="11">category.Cytochrome.P.450.CYP3A4.Substrates</label><input type="text" id="11"></p>
+<p><label for="12">category.Cytochrome.P.450.Enzyme.Inhibitors</label><input type="text" id="12"></p>
+<p><label for="13">category.Hypotensive.Agents</label><input type="text" id="13"></p>
+<p><label for="14">category.Kinase.Inhibitor</label><input type="text" id="14"></p>
+<p><label for="15">category.Misc..Skin.and.Mucous.Membrane.Agents</label><input type="text" id="15"></p>
+<p><label for="16">category.Nucleic.Acid.Synthesis.Inhibitors</label><input type="text" id="16"></p>
+<p><label for="17">category.P.glycoprotein.ABCB1.Inhibitors</label><input type="text" id="17"></p>
+<p><label for="18">category.P.glycoprotein.ABCB1.Substrates</label><input type="text" id="18"></p>
+<p><label for="19">category.Proteins</label><input type="text" id="19"></p>
+<p><label for="20">category.Purine.Analogues</label><input type="text" id="20"></p>
+<p><label for="21">category.Transferases</label><input type="text" id="21"></p>
+<p><label for="22">targets.Complement.C1q.subcomponent.subunit.A</label><input type="text" id="22"></p>
+<p><label for="23">targets.Complement.C1q.subcomponent.subunit.B</label><input type="text" id="23"></p>
+<p><label for="24">targets.Complement.C1q.subcomponent.subunit.C</label><input type="text" id="24"></p>
+<p><label for="25">targets.DNA</label><input type="text" id="25"></p>
+<p><label for="26">targets.DNA.polymerase.alpha.catalytic.subunit</label><input type="text" id="26"></p>
+<p><label for="27">targets.Histone.deacetylase.1</label><input type="text" id="27"></p>
+<p><label for="28">targets.Low.affinity.immunoglobulin.gamma.Fc.region.II.b&nbsp;&nbsp;</label><input type="text" id="28"></p>
+<p><label for="29">targets.Low.affinity.immunoglobulin.gamma.Fc.region.II.c&nbsp;&nbsp;</label><input type="text" id="29"></p>
+<p><label for="30">targets.Platelet.derived.growth.factor.receptor.alpha.1</label><input type="text" id="30"></p>
+<p><label for="31">targets.Programmed.cell.death.1.ligand.1</label><input type="text" id="31"><br><br><br></p>
+
+<p><input type="button" id="submit" value="SUBMIT"><br><br></p>
+<p><label>APPROVAL SCORE</label><input type="text" id="score"></p> 
+<p><label>LIKELY TO GET APPROVED?</label><input type="text" id="class"></p> 
+   
+</div>
+  </body>
+<script>
+var coeff = [0.249502598,0.216139574,
+0.047636995,
+0.309533371,
+0.142624733,
+0.077597346,
+0.855033714,
+0.795262741,
+0.107967005,
+0.103995091,
+0.640380895,
+0.538506012,
+1.462395861,
+1.559137675,
+0.572022768,
+0.149766725,
+0.158370454,
+0.845225434,
+0.130331031,
+0.830964346,
+1.831990258,
+1.964202848,
+6.83E-14,
+4.03E-15,
+0.245159942,
+0.004990145,
+0.394877117,
+0.030984052,
+9.39E-14,
+1.44181813,
+1.599881381,
+]
+
+let btn1 = document.getElementById('submit');
+ 
+let score = document.getElementById("score");
+let result = document.getElementById("class");
+let multArray = [];
+btn1.addEventListener("click", () => {
+    
+      for (let i = 1; i < 32; i++) {
+         multArray[i] = coeff[i-1] * parseInt(document.getElementById(i).value);
+      }
+
+      var sum = multArray.reduce(function(a, b){
+        return a + b;}, 0);
+      score.value = Number(Math.exp(sum)).toPrecision(4) ;
+      if(score.value>4.55)
+      {
+        result.value="YES";
+        result.style.background = "forestgreen";
+        
+      }
+      else
+      {
+        result.value="NO";
+        result.style.background = "red";
+      }
+   });
+</script>
+</body>
+</html>
